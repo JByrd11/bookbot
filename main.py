@@ -1,10 +1,10 @@
+
+from stats import get_num_words
+
 def get_text_from_file(path):
     with open(path) as f:
         return f.read()
 
-def word_count(string):
-    words = string.split()
-    return len(words)
 
 def character_count(string):
     lowered = string.lower()
@@ -20,9 +20,9 @@ def character_count(string):
 def sort_on(dict):
     return dict["count"]
 
-def print_report(filename, word_count, char_list):
+def print_report(filename, get_num_words, char_list):
     print(f"--- Begin report of {filename} ---")
-    print(f"{word_count} words found in the document")  # Changed this line
+    print(f"{get_num_words} words found in the document")  # Changed this line
     print("")
     for i in char_list:
         print(f"The '{i['char']}' character was found {i['count']} times")
@@ -31,7 +31,7 @@ def print_report(filename, word_count, char_list):
 
 # Main execution
 text = get_text_from_file("books/frankenstein.txt")
-word_count_result = word_count(text)
+word_count_result = get_num_wordst(text)
 char_counts = character_count(text)
 
 char_list = []
