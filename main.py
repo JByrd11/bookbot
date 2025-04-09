@@ -31,7 +31,7 @@ def print_report(filename, get_num_words, char_list):
 
 # Main execution
 text = get_text_from_file("books/frankenstein.txt")
-word_count_result = get_num_wordst(text)
+word_count_result = get_num_words(text)
 char_counts = character_count(text)
 
 char_list = []
