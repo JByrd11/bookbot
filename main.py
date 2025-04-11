@@ -24,7 +24,7 @@ def print_report(filename, word_count, char_list):
     print(f"{word_count} words found in the document")
     print("")
     for i in char_list:
-        print(f"The '{i['char']}' character was found {i['count']} times")
+        print(f"{i['char']}: {i['count']}")
     print("")
     print("--- End report ---")
 
